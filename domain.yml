@@ -6,18 +6,32 @@ actions:
 - utter_greet
 - utter_happy
 - utter_iamabot
+entities:
+- ingredient
+forms:
+- advice_form
 intents:
-- mood_unhappy
+- request_advice
 - greet
+- request
 - goodbye
 - affirm
 - deny
 - mood_great
+- mood_unhappy
 - bot_challenge
 session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
+slots:
+  ingredient:
+    auto_fill: false
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
 templates:
+  utter_ask_ingredient:
+  - text: Quel ingrédient ?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Pour te réconforter:'
@@ -31,3 +45,5 @@ templates:
   - text: Super !
   utter_iamabot:
   - text: Je suis un bot.
+  utter_wrong_ingredient:
+  - text: Je ne connais pas encore cet ingrédient.

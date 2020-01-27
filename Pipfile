@@ -4,11 +4,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pylint = "*"
+autopep8 = "*"
 
 [packages]
 rasa = "*"
 prompt-toolkit = "==2.0.10"
 questionary = "==1.4.0"
+spacy = "*"
 
 [requires]
 python_version = "3.7"
